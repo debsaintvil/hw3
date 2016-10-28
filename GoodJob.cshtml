@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Congratz! You Got the Answer!";
+}
+
+@model HW3Site.Models.Question
+    <div>
+        <h5>@Model.QuestionText</h5> 
+        <form asp-action="QuestionSubmit" class="form-inline mbm">
+    
+             @foreach(var ans in Model.Answers)
+                {
+                    <input type="radio" name="answer" value="">@ans.AnswerText <br>    
+                }
+      
+                
+                
+            
+        </form>
+
+    </div>

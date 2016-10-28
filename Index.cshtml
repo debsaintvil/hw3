@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "CS50 / C# Quiz";
+}
+
+@model HW3Site.Models.Question
+    <div>
+        
+        <h5>@Model.QuestionText</h5> 
+        <form asp-action="QuestionSubmit" class="form-inline mbm" method="POST">
+             @foreach(var ans in Model.Answers)
+                {
+                    <input type="radio" name="answer" value="">@ans.AnswerText <br>    
+                }
+            <input class="btn" type="submit" value="Submit Answer" />
+        </form>
+
+    </div>
